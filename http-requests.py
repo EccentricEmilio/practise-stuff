@@ -88,23 +88,3 @@ while ssm_108.answer_found == False and ssm_108.error == False:
     ssm_108.final_answer = ssm_108.add_letter(ssm_108.final_answer, False)
 
 ssm_108.check_ending()
-
-
-
-
-"""
-ssm_108 = Blind_boolean("Flaggan är SSM{a", "http://ssmarkiv.ctfchall.se:50002/108?input=")
-
-a = 0
-while a <= 100:
-  ssm_108.final_answer = ssm_108.add_letter(ssm_108.final_answer, False)
-  a += 1
-"""
-
-
-
-
-
-
-
-
