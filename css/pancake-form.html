@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancake form</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-size: 16px;
+
+        width: 70%;
+        margin: 40px auto;
+        background-color: #0d0f12;
+      }
+
+      .form {
+        
+        display: flex;
+        flex-flow: row wrap;
+        gap: 5px;
+
+        width: 90%;
+        border: 0.5px solid #e6e6e6;
+        border-radius: 5px;
+        padding: 12px;
+        margin: 10px auto;
+        
+      }
+
+      .form input {
+        display: block;
+
+        border: None;
+        border-bottom: 2px solid #848e99;
+        color: #e6e6e6;
+        background-color: #0d0f12;
+
+        width: 100%;
+
+      }
+
+      .name, .email, .submit-button {
+        flex: 1 1 auto;
+      }
+
+      .name, .email {
+        color: #e6e6e6;
+        flex-basis: 170px;
+      }
+
+      .name-input {
+        
+      }
+
+      .email-input {
+      }
+
+      .submit-button {
+        flex-basis: 100px;
+        height: 35px;
+
+        background-color: #e6e6e6;
+        color: #0d0f12;
+        border: None;
+        border-radius: 10px;
+
+
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <label for="points">Points (between 0 and 10):</label> -->
+    <!-- <input type="range" id="points" name="points" min="0" max="10">  -->
+ 
+    <form class="form">
+      <label class="name">
+        Name:
+        <input class="name-input" type="text" placeholder="John">
+      </label>
+
+      <label class="email">
+        Email:
+        <input class="email-input" type="email" placeholder="john7428@gmail.com">
+      </label>
+
+      <button class="submit-button">
+        Submit
+      </button>  
+    </form>
+
+  </body>
+</html>
