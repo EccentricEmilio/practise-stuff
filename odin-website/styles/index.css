@@ -14,6 +14,38 @@ body {
   margin: 0 auto;
 }
 
+/* introduction */
+.introduction-container {
+  background-color: #1F2937;
+}
+
+.introduction {
+  display: flex;
+}
+
+.introduction-image-placeholder {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #E5E7EB;
+}
+
+.introduction-text h1 {
+  color: #F9FAF8;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.introduction-text p {
+  color: #E5E7EB;
+  font-size: 18px;
+}
+
+.introduction-text button {
+  background-color: ;
+}
+
+
+
+
 /* header */
 .header {
   height: 80px;
