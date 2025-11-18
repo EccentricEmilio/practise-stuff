@@ -14,37 +14,9 @@ body {
   margin: 0 auto;
 }
 
-/* introduction */
-.introduction-container {
-  background-color: #1F2937;
+.introduction-container, .random-information-container, .quote-container, .sign-up-prompt-container {
+  height: 400px; 
 }
-
-.introduction {
-  display: flex;
-}
-
-.introduction-image-placeholder {
-  background-color: rgba(255, 255, 255, 0.4);
-  color: #E5E7EB;
-}
-
-.introduction-text h1 {
-  color: #F9FAF8;
-  font-size: 48px;
-  font-weight: 900;
-}
-
-.introduction-text p {
-  color: #E5E7EB;
-  font-size: 18px;
-}
-
-.introduction-text button {
-  background-color: ;
-}
-
-
-
 
 /* header */
 .header {
@@ -61,16 +33,69 @@ body {
 
 .header-logo {
   font-size: 24px;
-  color: #F9FAF8
+  color: #F9FAF8;
+  font-weight: bold; 
 }
 
 .header-links {
   display: flex;
   align-items: center;
   gap: 40px;
-  color: #E5E7EB;
+  color: #b0b2b5;
   font-size: 18px;
   
+}
+
+/* introduction */
+.introduction-container {
+  background-color: #1F2937;
+}
+
+.introduction-container .content-div {
+  display: flex;
+  align-items: center;
+}
+
+.introduction {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.introduction-image-placeholder {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #E5E7EB;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduction-text h1 {
+  color: #F9FAF8;
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.introduction-text p {
+  color: #b0b2b5;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.introduction-text button {
+  background-color: #3882F6;
+  border: None;
+  border-radius: 8px;
+  color: #F9FAF8;
+  font-weight: 900;
+  padding: 8px 23px;
+}
+
+.introduction-text {
+  flex: 1;
 }
 
 /* some-random-information */
@@ -82,9 +107,9 @@ body {
 .random-information-container .content-div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 40px 0px;
+  padding-top: 40px;
+  box-sizing: border-box;
 }
 
 .random-information {
@@ -132,7 +157,6 @@ body {
 /* quote */
 .quote-container {
   background-color: #E5E7EB;
-  height: 400px;
   width: 100%
 }
 
@@ -162,7 +186,6 @@ body {
 /* sign-up */
 .sign-up-prompt-container {
   background-color: white;
-  height: 400px;
   width: 100%;
 }
 
